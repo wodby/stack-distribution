@@ -1,0 +1,28 @@
+name: distribution
+icon: distribution
+title: Distribution Registry
+
+services:
+- name: registry
+  title: Distribution Registry
+  service: distribution
+  required: true
+  main: true
+  links:
+  - name: redis
+    service: registry-cache
+  volumes:
+  - name: data
+    size: 20
+
+- name: registry-cache
+  title: Registry metadata cache
+  service: valkey
+  required: false
+  env:
+  - name: VALKEY_SAVE_TO_DISK
+    value: '0'
+  - name: VALKEY_MAXMEMORY
+    value: 256m
+  - name: VALKEY_MAXMEMORY_POLICY
+    value: allkeys-lru
