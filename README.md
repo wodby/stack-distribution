@@ -19,6 +19,7 @@ by adding a compatible `distribution-auth` service to a derived stack.
 
 - [Distribution Registry stack on Wodby](https://wodby.com/stacks/distribution)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
+- [Distribution Registry stack guide](https://wodby.com/docs/2.0/stacks/catalog/distribution/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
 - [Stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
 
